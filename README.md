@@ -1,4 +1,4 @@
-# 🐳 CloudLabX - Dockerized App Deployment on AWS EC2
+# 🐳 Dockerized App Deployment on AWS EC2
 
 ![AWS](https://img.shields.io/badge/AWS-EC2-FF9900?logo=amazonaws&logoColor=white)
 ![Amazon Linux](https://img.shields.io/badge/Amazon%20Linux-2023-F90?logo=amazonlinux&logoColor=white)
@@ -202,16 +202,5 @@ sudo certbot --nginx -d cloudlabx.me -d www.cloudlabx.me
 }
 ```
 ---
-
-## 🔧 Troubleshooting & Resolutions
-
-| Issue | Error | Resolution |
-|-------|-------|------------|
-| **Missing index.js** | `Cannot find module '/app/index.js'` | Created `index.js` with Express application |
-| **Docker Buildx** | `requires buildx 0.17.0 or later` | Manually updated buildx plugin |
-| **Certbot urllib3** | `ModuleNotFoundError: No module named 'urllib3'` | Reinstalled `python3-urllib3` |
-| **Certbot cffi** | `DistributionNotFound: The 'cffi>=1.12' distribution was not found` | Reinstalled `python3-cffi` and `python3-cryptography` |
-| **Nginx Config** | `open() "/etc/nginx/nginx.conf" failed` | Restored backup (used `cp` not `mv` for backups) |
-| **502 Bad Gateway** | Nginx cannot reach Docker | Verified container running on port 3000 |
 
 ⭐ Star this repository if you found it helpful!
